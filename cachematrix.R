@@ -27,7 +27,7 @@ cacheSolve <- function(x, ...){
 ## If there is already cached data: return it.
 		return(inverse)
 	}
-## If there is already cached data: Solve for the inverse and cache it.
+## If there is no cached data: Solve for the inverse and cache it.
 	dt <- x$get()
 	inverse <- solve(dt, ...)
 	x$setinverse(inverse)
